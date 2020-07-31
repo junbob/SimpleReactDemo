@@ -1,19 +1,31 @@
-Simple React Snippets
-Prettier - Code formatter, then config auto save in vs settings
-Auto Rename Tag
+Vscode extensions:
+- Simple React Snippets
+- Prettier - Code formatter, then config auto save in vs settings
+- Auto Rename Tag
 
+React Basics:
 - functional component
-  - props read only
-  - state immutable
-  - conditional render
-  - fragment
-  - js in {} and single expression between {}, map, key
-  - css module
-  - children
+  - props and state
+  - conditional rendering
+  - jsx
+    - js in html
+    - fragment
+    - props.children
+    - passing 
+  - styles
+    - inline styles
+    - global css 
+    - css modules
 - hooks
-  - useState, depend on previous state
-- nested component passing value, function
+  - useState
+  - useEffect
 - axios
 - router
+  - link
+  - switch
 - lazy loading
 - redux
+  - store
+  - action
+  - reducer
+  - redux hooks
