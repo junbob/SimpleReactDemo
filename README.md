@@ -1,9 +1,11 @@
 Vscode extensions:
+
 - Simple React Snippets
 - Prettier - Code formatter, then config auto save in vs settings
 - Auto Rename Tag
 
 React Basics:
+
 - functional component
   - props and state
   - conditional rendering
@@ -11,10 +13,10 @@ React Basics:
     - js in html
     - fragment
     - props.children
-    - passing 
+    - passing
   - styles
     - inline styles
-    - global css 
+    - global css
     - css modules
 - hooks
   - useState

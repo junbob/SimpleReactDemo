@@ -1,0 +1,12 @@
+li {
+  font-size: 30px;
+  color: blue;
+}
+
+.redText2 .redText {
+  color: red;
+}
+
+#abc {
+  color: green;
+}

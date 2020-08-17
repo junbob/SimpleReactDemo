@@ -1,24 +1,32 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Suspense } from "react";
+import "./App.css";
+import TodoPage from "./Todo";
 
-function App() {
+import { Route, Switch } from "react-router-dom";
+import HomePage from "./Home";
+import TodoDetail from "./TodoDetail";
+// import AboutPage from "./About";
+// import NavBar from "./NavBar";
+const AboutPage = React.lazy(() => import("./About"));
+const NavBar = React.lazy(() => import("./NavBar"));
+
+function App(props) {
+  // const abc = TodoPage();
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Suspense fallback={<div>Loading...</div>}>
+        <NavBar />
+      </Suspense>
+
+      <Suspense fallback={<div>Loading...</div>}>
+        <Switch>
+          <Route path="/" component={HomePage} exact />
+          <Route path="/about" component={AboutPage} />
+          <Route path="/todo/:id" component={TodoDetail} />
+          <Route path="/todo" component={TodoPage} />
+        </Switch>
+      </Suspense>
     </div>
   );
 }
